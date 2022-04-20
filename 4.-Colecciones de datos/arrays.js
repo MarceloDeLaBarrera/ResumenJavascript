@@ -55,6 +55,15 @@ let nuevoArray = amigos.map((amigo) => `Hola ${amigo}`);
 
 let numeros = [10, 436, 45, 74, 33, 9, 2, 54];
 let numerosFiltrados = [];
+const meses = [44, 55, 66, 54, 32];
+
+const cart = [
+  { nombre: "pepe", precio: 300 },
+  { nombre: "ds", precio: 3232 },
+  { nombre: "dasasd", precio: 2321 },
+  { nombre: "fd", precio: 3243 },
+  { nombre: "pepddssdde", precio: 300 },
+];
 
 //Sin filter
 numeros.map((num) => {
@@ -65,6 +74,57 @@ numeros.map((num) => {
 
 //Con filter
 let numeros_filtrados = numeros.filter((num) => num > 20);
+
+//Ver que elementos cuestan 300 con .filter
+const indice2= cart.filter((producto)=> producto.precio===300);
+console.log("")
+
+//Para array de variables, tradicional
+let resultado = meses.includes(44); //return true or false si esta en el array
+
+//Para array de objetos o tradicional. Some sirve para ver si se encuentra algun elemento dentro del array
+let existe = cart.some((producto)=> producto.nombre === "pepe" //return true or false con .some si se encuentra dentro.
+)
+console.log(existe) 
+
+let existe2= meses.some((mes)=> mes===55)
+
+//Every sirve para ver que se cumpla la condicion en todos los elementos del array.
+let secumple = cart.every(producto => producto.precio>500) // retorna false. Si fuera desde 300 si aplicaria true.
+
+
+//Acumular con foreach.
+
+let total =0;
+cart.forEach((producto)=> total+= producto.precio)
+console.log(total)
+
+
+//Acumular con reduce. Se le pasan el parametro donde se acumulará y los valores a acumular. El tercer parametro seria el valor inicial de total.
+//
+let resultado2= cart.reduce((montoTotal,producto)=> montoTotal+ producto.precio, 0)
+
+
+//.find para encontrar elemento.
+let resultado3= cart.find((producto)=> producto.nombre==="pepe" )
+//Retorna el objeto entero, el primer elemento que encuentre.
+
+
+//Para ver en que indice.
+const indice = meses.findIndex((mes)=> mes === 66 );
+console.log(indice) //almacena en indice el indice si es que existe, si no, almacena un -1
+
+if(indice>0){
+    console.log("Elemento existe")
+}else{
+    console.log("No existe")
+}
+
+
+//Spread de meses. Es temporal no modifica el arreglo original y agrega elemento al final.
+const meses2= [...meses, "agosto"];
+
+
 
 //Recorrer Array de un array
 

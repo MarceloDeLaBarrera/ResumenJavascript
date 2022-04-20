@@ -45,3 +45,6 @@ const PRODUCTO3 = {
 
 const CARRITO_LLENO = [...CARRITO, PRODUCTO, PRODUCTO2, PRODUCTO3]; //Metiendo los objetos dentro de lista carrito.
 const CARRITO_LLENO2 = [PRODUCTO, ...CARRITO_LLENO]; //Metiendo producto al tope de la lista.
+
+//Spread. Es temporal no modifica el arreglo original y agrega elemento al final.
+const array1= [...a1, "pipi"];
