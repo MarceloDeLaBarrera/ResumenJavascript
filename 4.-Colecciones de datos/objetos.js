@@ -103,6 +103,16 @@ const PERSONA = {
   console.log(nombre, apellido, edad);
 }
 
+//Asignar otro nombre a una variable destructurada.
+
+const {nombre:nombre2} = PERSONA;
+
+//Destructuracion en parametros de una funcion.
+const retornaPersona = ({nombre,apellido, rango= "heroe"}) => {
+  console.log(nombre,apellido, rango)
+}
+retornaPersona(PERSONA)
+
 //Destructuracion de objetos anidados:
 
 const PERRO = {
@@ -117,10 +127,7 @@ const PERRO = {
   },
 };
 
-let {
-  nombre,
-  actitudes: { ladrar },
-} = PERRO;
+let {nombre, actitudes: { ladrar },} = PERRO;
 
 console.log(nombre, ladrar); //Actitudes no existiria como variable, para ello, habria que agregarlo en la destrucctacion por si solo.
 

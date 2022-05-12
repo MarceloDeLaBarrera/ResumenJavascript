@@ -43,6 +43,9 @@ const PRODUCTO3 = {
   precio: 54356,
 };
 
+//Copiar contenido de un objeto dentro de otro
+const productoX= {...PRODUCTO}
+
 const CARRITO_LLENO = [...CARRITO, PRODUCTO, PRODUCTO2, PRODUCTO3]; //Metiendo los objetos dentro de lista carrito.
 const CARRITO_LLENO2 = [PRODUCTO, ...CARRITO_LLENO]; //Metiendo producto al tope de la lista.
 

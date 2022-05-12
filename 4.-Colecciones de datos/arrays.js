@@ -85,7 +85,7 @@ let resultado = meses.includes(44); //return true or false si esta en el array
 //Para array de objetos o tradicional. Some sirve para ver si se encuentra algun elemento dentro del array
 let existe = cart.some((producto)=> producto.nombre === "pepe" //return true or false con .some si se encuentra dentro.
 )
-console.log(existe) 
+console.log(existe)
 
 let existe2= meses.some((mes)=> mes===55)
 
@@ -121,7 +121,7 @@ if(indice>0){
 }
 
 
-//Spread de meses. Es temporal no modifica el arreglo original y agrega elemento al final.
+//Spread de meses. Es temporal no modifica el arreglo original y agrega elemento al final, tal cual como push.
 const meses2= [...meses, "agosto"];
 
 

@@ -53,6 +53,14 @@ MIFUNCION("Juan");
 const saludar = (nombre) => `Hola ${nombre}`;
 saludar("Marcelo");
 
+//Funcion expresada como constante con declaracion tipo flecha returnando objeto literal.
+const getUser = ()=> ({
+  uid: "abc12",
+  username: "elsdsada"
+});
+
+
+
 //Funcion como constante con declaracion tipo flecha, con parametros con valores predefinidos. Tambien se pueden colocar valores predefinidos en los otros tipos de funciones.
 const azarFlecha = (min = 1, max = 100) =>
   Math.floor(Math.random() * (max - min)) + min;
