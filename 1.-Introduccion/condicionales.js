@@ -38,3 +38,14 @@ for (let i = 0; i < NUMEROS.length; i++) {
   }
   console.log(NUMEROS[i]);
 }
+
+//Ternarios
+
+const activo= true;
+
+const mensaje = (activo)? 'Activo' : 'Inactivo';
+console.log(mensaje);
+
+//Truthly
+const mensaje2= activo && 'Activo' //Esto es equivalente a if (activo===true) return lo de al lado si se cumple, si no, retorna false
+const mensaje3= !activo && 'Activo' // Retorna false. Esto es equivalente a (activo===false) return lo de al lado, si no, retorna false.
