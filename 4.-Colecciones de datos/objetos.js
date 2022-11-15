@@ -71,7 +71,7 @@ gato["nuevoEnemigo"] = "Robinzon"; //Para añadir valor al set igualmente.
 //Recorrer objetos con ciclo for
 for (let propiedad in gato) {
   console.log(propiedad); //key
-  console.log(gato[propiedad]); //value... No funciona el "." ... Solo funciona con corchetes.
+  console.log(gato[propiedad]); //value... No funciona el "." ... Solo funciona con corchetes..
 }
 
 //Otra forma de recorrer objetos con ciclo for, similar a python.
@@ -105,13 +105,13 @@ const PERSONA = {
 
 //Asignar otro nombre a una variable destructurada.
 
-const {nombre:nombre2} = PERSONA;
+const { nombre: nombre2 } = PERSONA;
 
 //Destructuracion en parametros de una funcion.
-const retornaPersona = ({nombre,apellido, rango= "heroe"}) => {
-  console.log(nombre,apellido, rango)
-}
-retornaPersona(PERSONA)
+const retornaPersona = ({ nombre, apellido, rango = "heroe" }) => {
+  console.log(nombre, apellido, rango);
+};
+retornaPersona(PERSONA);
 
 //Destructuracion de objetos anidados:
 
@@ -127,7 +127,10 @@ const PERRO = {
   },
 };
 
-let {nombre, actitudes: { ladrar },} = PERRO;
+let {
+  nombre,
+  actitudes: { ladrar },
+} = PERRO;
 
 console.log(nombre, ladrar); //Actitudes no existiria como variable, para ello, habria que agregarlo en la destrucctacion por si solo.
 
